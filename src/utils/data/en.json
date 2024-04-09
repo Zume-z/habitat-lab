@@ -1,0 +1,114 @@
+{
+  "projects": {
+    "jacaranda-wing": {
+      "id": "jacaranda-wing",
+      "label": "Jacaranda Wing",
+      "scope": "Design & Build",
+      "date": "2024",
+      "thumbnail": "/assets/thumbnails/jacaranda-wing.png",
+      "location": "Kotara",
+      "description": "Alterations and additions to a 1950s weatherboard home in whitebridge have occurred in stages over the past three years. They are the outcome of a meaningful collaboration between the client and the design & build team of daniel and dyishin.​ \n\nThe project is to make the existing dwelling more liveable for the client with the rear addition incorporating a new entry, kitchen and living area on the ground floor and a new study and bedroom nook on the upper floor.  the form peeks out behind and over the existing dwelling to capture views and ventilation.  typical materials have been specified for economy but modified in playful expression to have them suit the requirements of the brief"
+    },
+
+    "berrara-shed": {
+      "id": "berrara-shed",
+      "label": "Berrara Shed",
+      "scope": "Design & Build",
+      "date": "2022",
+      "thumbnail": "/assets/thumbnails/berrara-shed.png",
+      "location": "Berrara",
+      "description": "The project brief was for a simple structure similar to the fibre shacks and sheds of the area. Our response was to 'dress up' these common elements and bring beauty to stock standard construction materials and techniques. These include building a custom folding door, using offcuts as light shades to standard light globes, painting and exposing the timber stud frame in black and using hardwood battens to give a typical board and batten fibro cladding depth and warmth."
+    },
+    "kotara-kitchen": {
+      "id": "kotara-kitchen",
+      "label": "Kotara Kitchen",
+      "scope": "Design & Build",
+      "date": "2021",
+      "thumbnail": "/assets/thumbnails/kotara-kitchen.png",
+      "location": "Kotara",
+      "description": "A new kitchen designed as a colourful, crafted insertion into a 1930's home kept in loving original condition. Plywood and paperock are treated as sculptural, practical elements and paired with flashes of colour and copper."
+    },
+    "woodstock": {
+      "id": "woodstock",
+      "label": "Woodstock",
+      "scope": "Design & Build",
+      "date": "2020",
+      "thumbnail": "/assets/thumbnails/the-missing-middle.png",
+      "location": "South Coast",
+      "description": "Woodstock is an extension to an existing shed on a rural property, creating a habitable dwelling as a holiday home on the south coast. The scheme includes two bedrooms, adjoining kitchen/dining area with a bath house beyond.  the bath house is covered by a large suspended concrete roof held up by structural steel which allows space for a concealed toilet. The bath house is fully openable by large timber doors and the shower space is defined by an opaque glass box. Extensive timber work and concrete throughout are expressed from large mirrors reflecting the surrounding landscape."
+    },
+    "the-common": {
+      "id": "the-common",
+      "label": "The Common",
+      "scope": "Design",
+      "date": "2020",
+      "thumbnail": "/assets/thumbnails/the-missing-middle.png",
+      "location": "Dungog",
+      "description": ""
+    },
+    "newport": {
+      "id": "newport",
+      "label": "Newport",
+      "scope": "Design & Build",
+      "date": "2019",
+      "thumbnail": "/assets/thumbnails/the-missing-middle.png",
+      "location": "Dungog",
+      "description": "Newport was an addition to an existing property on a steep site. The existing 60s split level property had a third full height floor added to accommodate a new master suite and additional living space. The new addition maximises views over the bay whilst maintaining a level of privacy as the floor is set back significantly from the lower roof. The steep winding site makes use of extensive hard landscaping and timber stairs to create better access for the young growing family."
+    },
+    "etiwanda": {
+      "id": "etiwanda",
+      "label": "Etiwanda",
+      "scope": "Design & Build",
+      "date": "2018",
+      "thumbnail": "/assets/thumbnails/the-missing-middle.png",
+      "location": "Cobar",
+      "description": "Etiwanda was a short project on a remote property near cobar, focussing on using found materials on the property. The build was mostly the reincarnation of an old shearing shed, along with an array of other found materials to give new life to the existing building. The outcome was sensitive to the west facing facade and made use of structural steel found on the site to create large eave overhangs to shade the wall. Custom doors and windows were built on-site."
+    },
+    "timor-creek": {
+      "id": "timor-creek",
+      "label": "Timor Creek",
+      "scope": "Design & Build",
+      "date": "2018",
+      "thumbnail": "/assets/thumbnails/the-missing-middle.png",
+      "location": "Cobar",
+      "description": "This project sought to save a 100 year old shearing shed and allow the client minimal amenity while visiting the remote site. Every effort was made to maintain as many original features of this wonderful building as possible. The outcome is an original condition internal shearing shed, brought forward to the 21st century through modern facilities and a level of comfort not afforded to shearers in years gone by."
+    },
+    "the-farmhouse": {
+      "id": "the-farmhouse",
+      "label": "The Farmhouse",
+      "scope": "Design & Build",
+      "date": "2017",
+      "thumbnail": "/assets/thumbnails/the-farmhouse.png",
+      "location": "Millers Forest",
+      "description": "A house for retired family clients on a farm overlooking the Hunter River. The house was designed to be as self sufficient as possible for sustainable living and ongoing costs. Passive design strategies used include a poly pipe water storage wall to regulate internal air temperature, site orientation, cross ventilation, solar gain control devices, 36,000l water storage, on site effluent disposal, as well as a large roof PV system. With a battery this house will be completely off grid. \n\nFlood restrictions from high ground floor inundation were resolved through smart engineering followed through in robust construction. As a result, views over the hunter river were maximised and high level increased air flow helps passively cool the upper floor."
+    },
+    "the-missing-middle": {
+      "id": "the-missing-middle",
+      "label": "The Missing Middle",
+      "scope": "Design",
+      "date": "2017",
+      "thumbnail": "/assets/thumbnails/the-missing-middle.png",
+      "location": "NSW",
+      "description": "The Missing Middle design competition was held by the NSW government for designers to test its draft design guide for complying development in medium density housing. \n\nThe competition entry critiqued the prevailing idea of side-by-side dual occupancy developments on typical suburban lots. It called for flexibility to the rules on a site by site basis, to allow dwellings to be built to the front and rear of typical suitable lots such as corners and those with dual frontages onto a street and a park, river, canal etc. This front and back model allows for more usable garden space and greater access to views, sunlight and ventilation. To demonstrate this idea for the competition, a suitable site in earlwood, sydney was chosen to examine."
+    }
+  },
+  "about": {
+    "baseInfo": "Habitat lab is a design & build practice located on awabakal country in Newcastle, NSW. \nThe practice was created at the beginning of 2021 and is a collaboration between Daniel Morris & Alex Armstrong after finding common ground during Masters of Architecture. \nAs the name implies, Habitat Lab has a focus on experimenting through architecture and constrcution, whether that be through challenging the way people engage with the spaces they live in, exploring materiality or focusing our keen interest on passive design principles and a wholistic approach to site and people. \nWe endeavour to engage with clients that require and individual response to their brief and wish to focus on building socially and environmentally responsible spaces.",
+    "employees": {
+      "daniel-morris": {
+        "id": "daniel-morris",
+        "name": "Daniel Morris",
+        "role": "Architect",
+        "thumbnail": "/assets/pfp/daniel-morris.jpg",
+        "description": "Daniel holds two degrees in architecture, a certificate III in carpentry and a certificate IV in building & construction. He achieved his trade qualifications prior to commencing his studies, which give him a keen insight into the built reality of each design. this knowledge allows daniel to push the typical built outcome of a project, allowing the 'dressing up' of typical materials and incorporation of unique operable elements and materials into each project. ​ Prior to habitat lab, daniel has worked as a carpenter with established architects such as Drew Heath and Peter Stutchbury, in landscape design office and has operated as a leading hand on owner-build residential projects. In these projects, client collaboration has been key to the project's success."
+      },
+      "alex-armstrong": {
+        "id": "alex-armstrong",
+        "name": "Alex Armstrong",
+        "role": "Architect",
+        "thumbnail": "/assets/pfp/alex-armstrong.jpg",
+        "description": "Alex holds two degrees in architecture, beginning his studies at sydney university before transferring to the university of newcastle ​ he is a clear visual communicator, interested in how design can be informed and communicated by different modes and scales of drawing and making ​ alex has worked in small architectural practices in sydney and newcastle and has had the opportunity to contribute to the full architectural scope of services for small residential builds. He has also spent time working for landscapers and is an avid green thumb."
+      }
+    }
+  }
+}

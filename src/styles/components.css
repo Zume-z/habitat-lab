@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.menu-item {
+  font-weight: bold;
+  background-clip: text;
+  background-size: 200% 100%;
+  background-position: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-decorations-in-effect: text;
+  background-image: linear-gradient(to right, white, white 50%, var(--primary-col) 50%);
+}
+
+.menu-item:hover {
+  transition: all 0.35s cubic-bezier(0, 0, 0.35, 1);
+  background-position: 0%;
+}
+
+.menu-item:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0px;
+  content: '';
+  display: block;
+  height: 3px;
+  position: absolute;
+  background: white;
+  transition: 0.35s ease 0s, left 0.35s ease 0s;
+  width: 0;
+}
+
+.menu-item:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.card-class {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  padding-bottom: 32px;
+  padding-left: 32px;
+}
+
+.card-label {
+  font-weight: 600;
+  background-clip: text;
+  background-size: 200% 100%;
+  background-position: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-decorations-in-effect: text;
+  background-image: linear-gradient(to right, var(--primary-col), var(--primary-col) 50%, white 50%);
+}
+
+.card-label:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 2.5px;
+  content: '';
+  display: block;
+  height: 3px;
+  position: absolute;
+  background: var(--primary-col);
+  transition: 0.35s ease 0s, left 0.35s ease 0s;
+  width: 0;
+}
+
+.card-class:hover .card-label {
+  transition: all 0.35s cubic-bezier(0, 0, 0.35, 1);
+  background-position: 0%;
+}
+
+.card-class:hover .card-label:after {
+  width: 100%;
+  left: 0;
+}

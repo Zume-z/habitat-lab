@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './components.css';
+@import './utilities.css';
+
+html {
+  background-color: #dddddd;
+}
+
+:root {
+  --primary-col: black;
+  --main-alt-color: #283271;
+  --main-alt2-color: #79d760;
+}
