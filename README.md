@@ -3,9 +3,11 @@
  
 # Habitat Lab
 
-A site for Habitat Lab, a design & build practice located in Newcastle, Australia. 
- 
+Habitat Lab is a Newcastle-based design and build firm focused on delivering high-quality and sustainable architectural solutions. Their goal is to create functional, aesthetically pleasing spaces that meet the needs of clients. The purpose of this site is to present a portfolio of work, making it easy for potential clients to view past and present projects.
 </div>
+
+
+
 
 ## Features
 * Visually engaging portfolio showcasing past and current projects.
