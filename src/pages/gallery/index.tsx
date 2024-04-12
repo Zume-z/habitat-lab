@@ -31,7 +31,7 @@ export default function Gallery({ imgPaths }: { imgPaths: string[] }) {
   }
 
   return (
-    <Layout>
+    <Layout title="Gallery">
       <div className="pb-16 md:pb-0">
         <Nav title="Gallery" />
         <Header title="Gallery" textCol="" />

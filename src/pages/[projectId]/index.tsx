@@ -40,7 +40,7 @@ export default function ProjectId({ imgPaths }: { imgPaths: string[] }) {
   const visibility = useIntersectionObserver(refs, imgPaths, { threshold: 0.5 })
 
   return (
-    <Layout>
+    <Layout title={project?.label || projectId}>
       <ImageBg src={`/assets/projects/${projectId}/thumbnail.png`} />
       <div className="h-screen w-full">
         <Nav title={project?.label || projectId} />

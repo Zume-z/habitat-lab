@@ -24,7 +24,7 @@ export default function Home() {
   )
 
   return (
-    <Layout>
+    <Layout title="Projects">
       <Nav title="Projects" />
       <Header title="Projects" />
       <div className="flex w-full flex-wrap pt-32 md:pl-36 md:pt-56">

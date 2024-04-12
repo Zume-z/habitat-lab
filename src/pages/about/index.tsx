@@ -18,7 +18,7 @@ export default function About() {
   ]
 
   return (
-    <Layout>
+    <Layout title="About">
       <ImageBg src={'/assets/about.jpeg'} style="md:block hidden " />
       <div className="w-full md:h-screen">
         <Nav title="Habitat Lab" />

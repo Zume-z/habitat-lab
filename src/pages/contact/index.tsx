@@ -6,7 +6,7 @@ import Layout from '@/components/Layout'
 
 export default function Contact() {
   return (
-    <Layout>
+    <Layout title="Contact">
       <Nav title="Contact" />
       <Header title="Contact" />
       <Form />
