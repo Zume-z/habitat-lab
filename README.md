@@ -6,8 +6,7 @@
 Habitat Lab is a Newcastle-based design and build firm focused on delivering high-quality and sustainable architectural solutions. Their goal is to create functional, aesthetically pleasing spaces that meet the needs of clients. The purpose of this site is to present a portfolio of work, making it easy for potential clients to view past and present projects.
 </div>
 
-
-
+ <a href="https://habitat-lab.vercel.app/">Display Site ↗</a> 
 
 ## Features
 * Visually engaging portfolio showcasing past and current projects.
