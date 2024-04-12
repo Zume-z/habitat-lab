@@ -8,7 +8,7 @@ import ScrollButton from '@/components/ScrollButton'
 import { getImagePaths } from '@/utils/getImagePaths'
 import { useButtonVisibility, useIntersectionObserver } from '@/utils/hooks'
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const imgPaths = await getImagePaths('public/assets/gallery')
   return { props: { imgPaths } }
 }
@@ -37,9 +37,11 @@ export default function Gallery({ imgPaths }: { imgPaths: string[] }) {
         <Header title="Gallery" textCol="" />
       </div>
 
-      <ScrollButton label="View Gallery" rotate={true} clickHandler={() => handleScrollToCenter()} style={`transition-500 hidden md:flex ${showScroll ? 'opacity-100' : 'opacity-0'}`} />
-      <ImageSlider imgPaths={imgPaths} imgPathPrefix={`/assets/gallery`} refs={refs} visibility={visibility} />
-      <ScrollButton label="Return to top" clickHandler={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style="flex" />
+      <div>
+        <ScrollButton label="View Gallery" rotate={true} clickHandler={() => handleScrollToCenter()} style={`transition-500 hidden md:flex ${showScroll ? 'opacity-100' : 'opacity-0'}`} />
+        <ImageSlider imgPaths={imgPaths} imgPathPrefix={`/assets/gallery`} refs={refs} visibility={visibility} />
+        <ScrollButton label="Return to top" clickHandler={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style="flex" />
+      </div>
     </Layout>
   )
 }
