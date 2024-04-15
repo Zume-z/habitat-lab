@@ -1,12 +1,10 @@
-import React from 'react'
-import Nav from '@/components/Nav'
+import React, { useState } from 'react'
 import data from '@/utils/data/en.json'
 import Header from '@/components/Header'
 import Layout from '@/components/Layout'
 import ImageBg from '@/components/ImageBg'
 import PojectLabel from '@/components/ProjectLabel'
 import { Employee, Label } from '@/utils/types'
-import Image from 'next/image'
 
 export default function About() {
   const employees: Employee[] = Object.values(data.about.employees)
@@ -17,9 +15,11 @@ export default function About() {
     { title: 'FOUNDED', value: '2021' },
   ]
 
+  const [loading, setLoading] = useState(true)
+
   return (
-    <Layout title="Habitat Lab">
-      <ImageBg src={'/assets/about.jpeg'} style="md:block hidden " />
+    <Layout title="Habitat Lab" loading={loading}>
+      <ImageBg src={'/assets/about.jpeg'} style="md:block hidden " setLoading={setLoading} />
       <div className="w-full md:h-screen">
         <Header title="Habitat Lab" textCol="text-white" />
       </div>

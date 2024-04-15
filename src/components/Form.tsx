@@ -1,7 +1,7 @@
 import InputField from './InputField'
 import RadioButton from './RadioButton'
 
-export default function Form() {
+export default function Form({ setLoading }: { setLoading: (loading: boolean) => void }) {
   const radioButtonItems = [
     { label: 'Less than $25K', id: 'budget-under-25k', defaultValue: 'under_25k' },
     { label: '$25K – $50K', id: 'budget-25k-50k', defaultValue: '25k-50k' },
@@ -22,7 +22,7 @@ export default function Form() {
     <div className="relative md:pl-52">
       <div className="relative">
         <div className=" lg:absolute lg:inset-0 lg:left-1/2">
-          <img className="h-64 w-full bg-gray-50 object-cover sm:h-80 lg:absolute lg:h-full" src="/assets/contact.jpeg" alt="contact" />
+          <img className="h-64 w-full bg-gray-50 object-cover sm:h-80 lg:absolute lg:h-full" src="/assets/contact.jpeg" alt="contact" onLoad={() => setLoading(false)} />
         </div>
 
         <div className="bg-black pb-24 pt-16 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:grid-cols-2 lg:pt-32">

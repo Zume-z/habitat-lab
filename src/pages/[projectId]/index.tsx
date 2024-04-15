@@ -3,7 +3,7 @@ import data from '@/utils/data/en.json'
 import Header from '@/components/Header'
 import Layout from '@/components/Layout'
 import ImageBg from '@/components/ImageBg'
-import React, { createRef, useRef } from 'react'
+import React, { createRef, useRef, useState } from 'react'
 import ImageSlider from '@/components/ImageSlider'
 import type { Label, Project } from '@/utils/types'
 import ProjectLabel from '@/components/ProjectLabel'
@@ -20,6 +20,7 @@ export async function getServerSideProps(context: { query: { projectId: string }
 
 export default function ProjectId({ imgPaths }: { imgPaths: string[] }) {
   const router = useRouter()
+  const [loading, setLoading] = useState(true)
   const projectId = router.query.projectId as string
   const project = (data.projects as { [key: string]: Project })[projectId] as Project
 
@@ -39,8 +40,8 @@ export default function ProjectId({ imgPaths }: { imgPaths: string[] }) {
   const visibility = useIntersectionObserver(refs, imgPaths, { threshold: 0.5 })
 
   return (
-    <Layout title={project?.label || projectId}>
-      <ImageBg src={`/assets/projects/${projectId}/thumbnail.png`} />
+    <Layout title={project?.label || projectId} loading={loading}>
+      <ImageBg src={`/assets/projects/${projectId}/thumbnail.png`} setLoading={setLoading} />
       <div className="h-screen w-full">
         <Header title={project?.label || projectId} textCol="text-white" top={true} />
       </div>

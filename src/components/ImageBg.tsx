@@ -1,9 +1,16 @@
 import Image from 'next/image'
+import { Dispatch, useState } from 'react'
 
-export default function ImageBg({ src, style }: { src: string; style?: string }) {
+interface ImageBgProps {
+  src: string
+  setLoading: Dispatch<React.SetStateAction<boolean>>
+  style?: string
+}
+
+export default function ImageBg({ src, setLoading, style }: ImageBgProps) {
   return (
     <div className={`absolute top-0 -z-10 h-full w-full ${style} `}>
-      <Image src={src} alt="background" fill={true} style={{ objectFit: 'cover' }} />
+      <Image src={src} alt="background" fill={true} style={{ objectFit: 'cover' }} onLoad={() => setLoading(false)} />
     </div>
   )
 }

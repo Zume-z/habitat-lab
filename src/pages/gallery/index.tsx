@@ -1,4 +1,3 @@
-import Nav from '@/components/Nav'
 import Header from '@/components/Header'
 import Layout from '@/components/Layout'
 import React, { createRef, useRef } from 'react'
@@ -31,7 +30,7 @@ export default function Gallery({ imgPaths }: { imgPaths: string[] }) {
   }
 
   return (
-    <Layout title="Gallery">
+    <Layout title="Gallery" loading={false}>
       <Header title="Gallery" />
       <div className="pt-10 md:pt-0">
         <ScrollButton label="View Gallery" rotate={true} clickHandler={() => handleScrollToCenter()} style={`transition-500 hidden md:flex ${showScroll ? 'opacity-100' : 'opacity-0'}`} />
