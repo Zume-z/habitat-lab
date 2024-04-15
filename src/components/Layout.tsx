@@ -30,7 +30,9 @@ export default function Layout({ children, title, loading }: LayoutProps) {
     router.events.on('routeChangeComplete', handleRouteChangeComplete)
     router.events.on('routeChangeError', handleRouteChangeComplete)
 
-    setOpacity(1)
+    if (!loading) {
+      setTimeout(() => setOpacity(1), 1000)
+    }
 
     return () => {
       router.events.off('routeChangeStart', handleRouteChangeStart)
