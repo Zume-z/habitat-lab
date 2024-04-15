@@ -7,11 +7,12 @@ export default function Nav({ title }: { title: string }) {
   const router = useRouter()
   const routerPath = '/' + router.pathname.split('/')[1]
   const navigation = [
-    { label: 'About', href: '/about' },
-    { label: 'Projects', href: '/' },
-    { label: 'Contact', href: '/contact' },
-    { label: 'Gallery', href: '/gallery' },
+    { label: 'About', href: '/about', active: routerPath === '/about' },
+    { label: 'Projects', href: '/', active: routerPath === '/' },
+    { label: 'Contact', href: '/contact', active: routerPath === '/contact' },
+    { label: 'Gallery', href: '/gallery', active: routerPath === '/gallery' },
   ]
+
   return (
     <div className="fixed z-50">
       <Disclosure as="nav" className="fixed z-10 w-full bg-black backdrop-blur-lg md:hidden">
@@ -55,10 +56,10 @@ export default function Nav({ title }: { title: string }) {
       <div className={`hidden flex-col space-y-2 pl-8 text-4xl md:block`}>
         {navigation.map((el) => (
           <div key={el.label} className="relative w-min">
-            <Link href={el.href} className={`text-[40px] ${el.href === routerPath ? ' text-gray-500 opacity-50' : 'menu-item'}`}>
+            <Link href={el.href} className={`text-[40px] ${el.active ? ' text-gray-500 opacity-50' : 'menu-item'}`}>
               {el.label}
             </Link>
-            <div className={`-mt-1.5 h-[2.5px] w-full ${el.href === routerPath ? 'bg-gray-500 opacity-50' : 'bg-black'}`} />
+            <div className={`-mt-1.5 h-[2.5px] w-full ${el.active ? 'bg-gray-500 opacity-50' : 'bg-black'}`} />
           </div>
         ))}
         <div className="pt-1">

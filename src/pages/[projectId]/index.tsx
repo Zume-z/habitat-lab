@@ -1,4 +1,3 @@
-import Nav from '@/components/Nav'
 import { useRouter } from 'next/router'
 import data from '@/utils/data/en.json'
 import Header from '@/components/Header'
@@ -8,9 +7,9 @@ import React, { createRef, useRef } from 'react'
 import ImageSlider from '@/components/ImageSlider'
 import type { Label, Project } from '@/utils/types'
 import ProjectLabel from '@/components/ProjectLabel'
-import { getImageDirPath, getImagePaths } from '@/utils/getImagePaths'
-import { useIntersectionObserver } from '@/utils/hooks'
 import ScrollButton from '@/components/ScrollButton'
+import { useIntersectionObserver } from '@/utils/hooks'
+import { getImageDirPath, getImagePaths } from '@/utils/getImagePaths'
 
 export async function getServerSideProps(context: { query: { projectId: string } }) {
   const projectId = context.query.projectId as string
@@ -43,7 +42,6 @@ export default function ProjectId({ imgPaths }: { imgPaths: string[] }) {
     <Layout title={project?.label || projectId}>
       <ImageBg src={`/assets/projects/${projectId}/thumbnail.png`} />
       <div className="h-screen w-full">
-        <Nav title={project?.label || projectId} />
         <Header title={project?.label || projectId} textCol="text-white" top={true} />
       </div>
 

@@ -32,12 +32,8 @@ export default function Gallery({ imgPaths }: { imgPaths: string[] }) {
 
   return (
     <Layout title="Gallery">
-      <div className="pb-16 md:pb-0">
-        <Nav title="Gallery" />
-        <Header title="Gallery" textCol="" />
-      </div>
-
-      <div>
+      <Header title="Gallery" />
+      <div className="pt-10 md:pt-0">
         <ScrollButton label="View Gallery" rotate={true} clickHandler={() => handleScrollToCenter()} style={`transition-500 hidden md:flex ${showScroll ? 'opacity-100' : 'opacity-0'}`} />
         <ImageSlider imgPaths={imgPaths} imgPathPrefix={`/assets/gallery`} refs={refs} visibility={visibility} />
         <ScrollButton label="Return to top" clickHandler={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style="flex" />
