@@ -1,11 +1,10 @@
-import Nav from '@/components/Nav'
 import { Project } from '@/utils/types'
 import data from '@/utils/data/en.json'
 import Header from '@/components/Header'
 import Layout from '@/components/Layout'
 import ProjectCard from '@/components/ProjectCard'
 import { createRef, useRef, RefObject } from 'react'
-import { useIntersectionObserver } from '@/utils/hooks'
+import { useIntersectionObserver } from '@/utils/hooks/useVisibility'
 
 export default function Home() {
   const projects: Project[] = Object.values(data.projects)

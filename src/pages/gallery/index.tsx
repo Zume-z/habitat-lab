@@ -2,10 +2,10 @@ import Header from '@/components/Header'
 import Layout from '@/components/Layout'
 import React, { createRef, useRef } from 'react'
 import ImageSlider from '@/components/ImageSlider'
-import { scrollToCenter } from '@/utils/scrollUtils'
+import { scrollToCenter } from '@/utils/hooks/scrollToCenter'
 import ScrollButton from '@/components/ScrollButton'
 import { getImagePaths } from '@/utils/getImagePaths'
-import { useButtonVisibility, useIntersectionObserver } from '@/utils/hooks'
+import { useButtonVisibility, useIntersectionObserver } from '@/utils/hooks/useVisibility'
 
 export async function getStaticProps() {
   const imgPaths = await getImagePaths('public/assets/gallery')

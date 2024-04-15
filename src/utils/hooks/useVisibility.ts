@@ -1,4 +1,3 @@
-import { Project } from './types'
 import { useEffect, useState } from 'react'
 
 export function useIntersectionObserver(refs: React.MutableRefObject<{ [key: string]: React.RefObject<unknown> }>, elements: string[], options: { threshold: number }) {

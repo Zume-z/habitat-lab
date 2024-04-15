@@ -3,10 +3,11 @@ import data from '@/utils/data/en.json'
 import Header from '@/components/Header'
 import Layout from '@/components/Layout'
 import ImageBg from '@/components/ImageBg'
-import PojectLabel from '@/components/ProjectLabel'
 import { Employee, Label } from '@/utils/types'
+import PojectLabel from '@/components/ProjectLabel'
 
 export default function About() {
+  const [loading, setLoading] = useState(true)
   const employees: Employee[] = Object.values(data.about.employees)
 
   const labelItems: Label[] = [
@@ -14,8 +15,6 @@ export default function About() {
     { title: 'LOCATION', value: 'Newcastle' },
     { title: 'FOUNDED', value: '2021' },
   ]
-
-  const [loading, setLoading] = useState(true)
 
   return (
     <Layout title="Habitat Lab" loading={loading}>

@@ -1,4 +1,3 @@
-import { Label } from '@/utils/types'
 import Image from 'next/image'
 import { MutableRefObject, RefObject } from 'react'
 

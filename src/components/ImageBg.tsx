@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Dispatch, useState } from 'react'
+import { Dispatch } from 'react'
 
 interface ImageBgProps {
   src: string

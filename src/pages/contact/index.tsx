@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
-import Nav from '@/components/Nav'
 import Form from '@/components/Form'
+import React, { useState } from 'react'
 import Header from '@/components/Header'
 import Layout from '@/components/Layout'
 
