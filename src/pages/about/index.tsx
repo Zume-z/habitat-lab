@@ -18,7 +18,7 @@ export default function About() {
 
   return (
     <Layout title="Habitat Lab" loading={loading}>
-      <ImageBg src={'/assets/about.jpeg'} style="md:block hidden " setLoading={setLoading} />
+      <ImageBg src={'/assets/about.png'} style="md:block hidden " setLoading={setLoading} />
       <div className="w-full md:h-screen">
         <Header title="Habitat Lab" textCol="text-white" />
       </div>
