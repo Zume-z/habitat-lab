@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import InputField from './InputField'
 import RadioButton from './RadioButton'
 
@@ -21,8 +22,17 @@ export default function Form({ setLoading }: { setLoading: (loading: boolean) =>
   return (
     <div className="relative md:pl-52">
       <div className="relative">
-        <div className=" lg:absolute lg:inset-0 lg:left-1/2">
-          <img className="h-64 w-full bg-gray-50 object-cover sm:h-80 lg:absolute lg:h-full" src="/assets/contact.jpeg" alt="contact" onLoad={() => setLoading(false)} />
+        <div className="relative pt-12 md:pt-0 lg:absolute lg:inset-0 lg:left-1/2">
+          <div className="relative h-64 w-full bg-gray-50 object-cover sm:h-80  lg:h-full">
+            <Image
+              className="object-cover"
+              src={`/assets/contact.jpeg`}
+              fill={true}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              alt={'contact'}
+              onLoad={() => setLoading(false)}
+            />
+          </div>
         </div>
 
         <div className="bg-black pb-24 pt-16 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:grid-cols-2 lg:pt-32">
