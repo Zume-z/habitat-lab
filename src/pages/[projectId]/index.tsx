@@ -7,8 +7,8 @@ import ImageSlider from '@/components/ImageSlider'
 import type { Label, Project } from '@/utils/types'
 import ProjectLabel from '@/components/ProjectLabel'
 import ScrollButton from '@/components/ScrollButton'
-import { useIntersectionObserver } from '@/utils/hooks/useVisibility'
 import React, { createRef, useRef, useState } from 'react'
+import { useIntersectionObserver } from '@/utils/hooks/useVisibility'
 import { getImageDirPath, getImagePaths } from '@/utils/getImagePaths'
 
 export async function getServerSideProps(context: { query: { projectId: string } }) {
