@@ -1,8 +1,10 @@
+import { FormEvent, useRef } from 'react'
 import Image from 'next/image'
 import InputField from './InputField'
 import RadioButton from './RadioButton'
 
-export default function Form({ setLoading }: { setLoading: (loading: boolean) => void }) {
+export default function Form({ setLoading, setContactSuccess }: { setLoading: (loading: boolean) => void; setContactSuccess: (success: boolean) => void }) {
+  const formRef = useRef<HTMLFormElement>(null)
   const radioButtonItems = [
     { label: 'Less than $25K', id: 'budget-under-25k', defaultValue: 'under_25k' },
     { label: '$25K – $50K', id: 'budget-25k-50k', defaultValue: '25k-50k' },
@@ -11,13 +13,32 @@ export default function Form({ setLoading }: { setLoading: (loading: boolean) =>
   ]
 
   const inputFieldItems = [
-    { label: 'First name', id: 'first-name', type: 'text', autoComplete: 'given-name', placeholder: '' },
-    { label: 'Last name', id: 'last-name', type: 'text', autoComplete: 'family-name', placeholder: '' },
-    { label: 'Email', id: 'email', type: 'email', autoComplete: 'email', placeholder: '', style: 'sm:col-span-2' },
-    { label: 'Project Time Frame', id: 'timeFrame', type: 'text', autoComplete: 'organization', placeholder: '', style: 'sm:col-span-2' },
-    { label: 'Phone', id: 'phone', type: 'tel', autoComplete: 'tel', placeholder: '', style: 'sm:col-span-2', isOptional: true },
-    { label: 'How can we help you?', id: 'message', type: 'text', autoComplete: 'organization', placeholder: '', style: 'sm:col-span-2', textArea: true },
+    { label: 'First name', id: 'firstName', type: 'text', autoComplete: 'given-name', placeholder: '', required: true },
+    { label: 'Last name', id: 'lastName', type: 'text', autoComplete: 'family-name', placeholder: '', required: true },
+    { label: 'Email', id: 'email', type: 'email', autoComplete: 'email', placeholder: '', style: 'sm:col-span-2', required: true },
+    { label: 'Project Time Frame', id: 'timeFrame', type: 'text', autoComplete: 'organization', placeholder: '', style: 'sm:col-span-2', required: false },
+    { label: 'Phone', id: 'phone', type: 'tel', autoComplete: 'tel', placeholder: '', style: 'sm:col-span-2', isOptional: true, required: false },
+    { label: 'How can we help you?', id: 'message', type: 'text', autoComplete: 'organization', placeholder: '', style: 'sm:col-span-2', textArea: true, required: true },
   ]
+
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    const formData = new FormData(event.currentTarget)
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      body: formData,
+    })
+
+    if (!res.ok) {
+      const { error } = await res.json()
+      console.error(error)
+    }
+
+    if (res.ok) {
+      setContactSuccess(true)
+      formRef.current?.reset()
+    }
+  }
 
   return (
     <div className="relative md:pl-52">
@@ -39,7 +60,7 @@ export default function Form({ setLoading }: { setLoading: (loading: boolean) =>
           <div className="mx-auto px-6 lg:mx-0 xl:px-16">
             <h2 className="text-3xl font-bold tracking-tight text-gray-100">Let's work together</h2>
             <p className="mt-2 text-lg leading-8 text-gray-400">Please get in touch as below or via our project enquiry form. We look forward to hearing from you.</p>
-            <form action="#" method="POST" className="mt-16 ">
+            <form ref={formRef} onSubmit={onSubmit} action="#" method="POST" className="mt-16 ">
               <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                 {inputFieldItems.map((item) => (
                   <InputField key={item.id} {...item} />
