@@ -1,9 +1,14 @@
-import { FormEvent, useRef } from 'react'
 import Image from 'next/image'
 import InputField from './InputField'
 import RadioButton from './RadioButton'
+import { FormEvent, useRef } from 'react'
 
-export default function Form({ setLoading, setContactSuccess }: { setLoading: (loading: boolean) => void; setContactSuccess: (success: boolean) => void }) {
+interface FormProps {
+  setLoading: (loading: boolean) => void
+  setModalData: (data: { display: boolean; text: string }) => void
+}
+
+export default function Form({ setLoading, setModalData }: FormProps) {
   const formRef = useRef<HTMLFormElement>(null)
   const radioButtonItems = [
     { label: 'Less than $25K', id: 'budget-under-25k', defaultValue: 'under_25k' },
@@ -30,12 +35,12 @@ export default function Form({ setLoading, setContactSuccess }: { setLoading: (l
     })
 
     if (!res.ok) {
-      const { error } = await res.json()
-      console.error(error)
+      if (res.status === 400) setModalData({ display: true, text: 'Please fill in all required fields.' })
+      else setModalData({ display: true, text: 'An error occurred, please try again later or email us directly at team@habitatlab.com.au' })
     }
 
     if (res.ok) {
-      setContactSuccess(true)
+      setModalData({ display: true, text: 'Thank you, we will be in contact soon.' })
       formRef.current?.reset()
     }
   }

@@ -6,13 +6,13 @@ import Modal from '@/components/Modal'
 
 export default function Contact() {
   const [loading, setLoading] = useState(true)
-  const [contactSuccess, setContactSuccess] = useState(false)
+  const [modalData, setModalData] = useState({ display: false, text: '' })
 
   return (
     <Layout title="Contact" loading={loading}>
       <Header title="Contact" />
-      <Form setLoading={setLoading} setContactSuccess={setContactSuccess} />
-      {contactSuccess && <Modal setContactSuccess={setContactSuccess} />}
+      <Form setLoading={setLoading} setModalData={setModalData} />
+      {modalData.display && <Modal setModalData={setModalData} modalData={modalData} />}
     </Layout>
   )
 }
