@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .transition-200 {
-  @apply transition duration-200 ease-out;
+  @apply transition duration-200 ease-in-out;
 }
 
 .transition-500 {

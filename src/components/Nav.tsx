@@ -5,12 +5,12 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/20/solid'
 
 export default function Nav({ title }: { title: string }) {
   const router = useRouter()
-  const routerPath = '/' + router.pathname.split('/')[1]
+
   const navigation = [
-    { label: 'About', href: '/about', active: routerPath === '/about' },
-    { label: 'Projects', href: '/', active: routerPath === '/' },
-    { label: 'Contact', href: '/contact', active: routerPath === '/contact' },
-    { label: 'Gallery', href: '/gallery', active: routerPath === '/gallery' },
+    { label: 'About', href: '/about', active: router.pathname === '/about' },
+    { label: 'Projects', href: '/', active: router.pathname === '/' },
+    { label: 'Contact', href: '/contact', active: router.pathname === '/contact' },
+    { label: 'Gallery', href: '/gallery', active: router.pathname === '/gallery' },
   ]
 
   return (
@@ -42,7 +42,7 @@ export default function Nav({ title }: { title: string }) {
                     key={el.label}
                     as="a"
                     href={el.href}
-                    className={`${el.href === routerPath ? 'border-l border-gray-500 text-gray-500' : 'text-white  hover:text-white'} block  px-3 py-2 text-lg font-medium`}
+                    className={`${el.active ? 'border-l border-gray-500 text-gray-500' : 'text-white  hover:text-white'} block  px-3 py-2 text-lg font-medium`}
                     aria-current={el.href ? 'page' : undefined}
                   >
                     {el.label}

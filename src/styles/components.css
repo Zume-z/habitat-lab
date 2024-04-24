@@ -10,7 +10,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-decorations-in-effect: text;
-  background-image: linear-gradient(to right, white, white 50%, var(--primary-col) 50%);
+  background-image: linear-gradient(to right, white, white 50%, black 50%);
 }
 
 .menu-item:hover {
@@ -51,7 +51,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-decorations-in-effect: text;
-  background-image: linear-gradient(to right, var(--primary-col), var(--primary-col) 50%, white 50%);
+  background-image: linear-gradient(to right, black, black 50%, white 50%);
 }
 
 .card-label:after {
@@ -61,7 +61,7 @@
   display: block;
   height: 3px;
   position: absolute;
-  background: var(--primary-col);
+  background: black;
   transition: 0.35s ease 0s, left 0.35s ease 0s;
   width: 0;
 }

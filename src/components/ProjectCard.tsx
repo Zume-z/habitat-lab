@@ -35,7 +35,7 @@ export default function ProjectCard({ project, visibility, refs }: ProjectCardPr
       <div className="flex space-x-10 pb-3 pt-7 font-mono ">
         {[project.scope, project.location, project.date].map((text, index) => (
           <div key={index}>
-            <div className=" text-[11px] text-gray-500">{['SCOPE', 'LOCATION', 'DATE'][index]}</div>
+            <div className="text-[11px] text-gray-500">{['SCOPE', 'LOCATION', 'DATE'][index]}</div>
             <div className="pt-1 text-[13px] text-sm">{text}</div>
           </div>
         ))}

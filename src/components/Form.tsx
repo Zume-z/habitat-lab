@@ -37,30 +37,27 @@ export default function Form({ setLoading, setModalData }: FormProps) {
     if (!res.ok) {
       if (res.status === 400) setModalData({ display: true, text: 'Please fill in all required fields.' })
       else setModalData({ display: true, text: 'An error occurred, please try again later or email us directly at team@habitatlab.com.au' })
-    }
-
-    if (res.ok) {
+    } else {
       setModalData({ display: true, text: 'Thank you, we will be in contact soon.' })
       formRef.current?.reset()
     }
   }
 
   return (
-    <div className="relative md:pl-52">
+    <div className="md:pl-52">
       <div className="relative">
-        <div className="relative pt-12 md:pt-0 lg:absolute lg:inset-0 lg:left-1/2">
-          <div className="relative h-64 w-full bg-gray-50 object-cover sm:h-80  lg:h-full">
+        <div className="relative lg:absolute lg:inset-0 lg:left-1/2">
+          <div className="relative h-64 sm:h-80 lg:h-full">
             <Image
-              className="object-cover"
-              src={`/assets/contact.jpeg`}
+              src="/assets/contact.jpeg"
               fill={true}
+              style={{ objectFit: 'cover' }}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              alt={'contact'}
-              onLoad={() => setLoading(false)}
+              alt="contact"
+              onLoadingComplete={() => setLoading(false)}
             />
           </div>
         </div>
-
         <div className="bg-black pb-24 pt-16 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:grid-cols-2 lg:pt-32">
           <div className="mx-auto px-6 lg:mx-0 xl:px-16">
             <h2 className="text-3xl font-bold tracking-tight text-gray-100">Let's work together</h2>
