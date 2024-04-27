@@ -48,8 +48,8 @@ export default function ProjectId({ imgPaths }: { imgPaths: string[] }) {
 
       <ProjectLabel labelItems={labelItems} style={'flex'} />
 
-      <div className="flex w-full justify-center md:pb-10 ">
-        <p className="whitespace-pre-wrap border-l border-gray-500 p-8 py-20 text-lg leading-9 text-gray-800 md:w-1/2">{project?.description}</p>
+      <div className="flex w-full justify-center md:pb-10  ">
+        <p className="whitespace-pre-wrap border-l border-gray-500 px-8 py-20 text-lg leading-9 text-gray-800 md:w-1/2">{project?.description}</p>
       </div>
 
       <ImageSlider imgPaths={imgPaths} imgPathPrefix={`/assets/projects/${projectId}`} refs={refs} visibility={visibility} />
