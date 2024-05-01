@@ -38,7 +38,7 @@ export function useGalleryIntersectionObserver(refs: React.MutableRefObject<{ [k
       }
     })
     return () => observer.disconnect()
-  }, [elements])
+  }, [elements.length])
 
   return visibility
 }

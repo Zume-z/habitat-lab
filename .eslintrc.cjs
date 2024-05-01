@@ -9,6 +9,7 @@ const config = {
     },
   ],
   parser: '@typescript-eslint/parser',
+  extends: ['plugin:testing-library/react'],
   parserOptions: {
     project: './tsconfig.json',
   },
